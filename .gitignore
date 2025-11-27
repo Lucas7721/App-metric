@@ -5,11 +5,9 @@ env/
 .env
 .vscode/
 .idea/
-*.mp4
 *.avi
 *.mkv
 *.mov
-data/raw/*
 data/results/*
 !data/raw/.gitkeep
 !data/results/.gitkeep
