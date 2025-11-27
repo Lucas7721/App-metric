@@ -6,6 +6,7 @@ import customtkinter as ctk
 from PIL import Image
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from src.io.paths import get_project_root 
 
 class AppMetricApp:
     def __init__(self):
@@ -18,14 +19,16 @@ class AppMetricApp:
         self.output_folder = None  
         self.progress_bar = None   
 
-        logo_path = r"C:\caminho\para\sua\logo_app_metric.png"
+        logo_path = os.path.join(get_project_root(), "assets", "logo", "logo_app_metric.png")
+        self.image_logo = None
         try:
-            self.image_logo = ctk.CTkImage(
-                dark_image=Image.open(logo_path),
-                size=(200, 200)
-            )
-        except Exception:
-            self.image_logo = None
+            if os.path.exists(logo_path):
+                pil_image = Image.open(logo_path)
+                self.image_logo = ctk.CTkImage(light_image=pil_image, dark_image=pil_image, size=(250, 250)) # Ajuste o tamanho se precisar
+            else:
+                print(f"Aviso: Logo não encontrada em {logo_path}")
+        except Exception as e:
+            print(f"Erro ao carregar logo: {e}")
 
         if self.image_logo:
             self.label_logo = ctk.CTkLabel(
