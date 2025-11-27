@@ -12,7 +12,7 @@ class TestPaths(unittest.TestCase):
     def test_project_root_exists(self):
         root = get_project_root()
         self.assertTrue(root.exists())
-        self.assertEqual(root.name, "Project")
+        self.assertTrue((root / "src").exists())
 
     def test_data_dirs_creation(self):
         raw_dir = get_data_dir("raw")
