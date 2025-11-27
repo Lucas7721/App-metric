@@ -57,7 +57,7 @@ def track_single_object(
     save_video: bool = True,
     save_csv: bool = False,
     pixels_per_meter: Optional[float] = None,
-    save_debug_images: bool = True,  # <--- ADICIONAR AQUI
+    save_debug_images: bool = True,
 
 ) -> Dict:
 
