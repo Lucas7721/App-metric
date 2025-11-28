@@ -17,36 +17,35 @@ em qualquer sistema operacional ou computador.
 '''
 #################
 
+from pathlib import Path  # Importa a classe Path para manipulação de caminhos de forma orientada a objetos
+from typing import Literal  # Importa Literal para definir valores específicos permitidos em argumentos
 
-from pathlib import Path
-from typing import Literal
-
-def get_project_root() -> Path:
-
+def get_project_root() -> Path:  # Define função que retorna o caminho raiz do projeto
+    # Retorna o diretório pai do pai do pai deste arquivo (sobe 3 níveis: io -> src -> Project)
     return Path(__file__).resolve().parents[2]
 
-def get_data_dir(subdir: Literal["raw", "processed", "results", "logs"] = "results",
-                 create: bool = True) -> Path:
+def get_data_dir(subdir: Literal["raw", "processed", "results", "logs"] = "results",  # Define função para obter subdiretórios de dados
+                 create: bool = True) -> Path:  # Argumento opcional para criar a pasta se não existir
 
-    root = get_project_root()
-    data_dir = root / "data"
+    root = get_project_root()  # Obtém a raiz do projeto
+    data_dir = root / "data"  # Define o caminho da pasta 'data'
 
-    if subdir == "logs":
-        path = data_dir / "results" / "logs"
+    if subdir == "logs":  # Se o subdiretório pedido for 'logs'
+        path = data_dir / "results" / "logs"  # Define o caminho dentro de results/logs
     else:
-        path = data_dir / subdir
+        path = data_dir / subdir  # Para outros casos, define data/subdir
 
-    if create:
-        path.mkdir(parents=True, exist_ok=True)
+    if create:  # Se a flag de criação estiver ativa
+        path.mkdir(parents=True, exist_ok=True)  # Cria a pasta e seus pais se necessário, sem erro se já existir
 
-    return path
+    return path  # Retorna o objeto Path do diretório
 
-def get_timestamped_results_dir(prefix: str = "exec") -> Path:
+def get_timestamped_results_dir(prefix: str = "exec") -> Path:  # Função para criar pasta de resultados com data/hora
 
-    from datetime import datetime
+    from datetime import datetime  # Importa datetime localmente
 
-    base_dir = get_data_dir("results", create=True)
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    result_dir = base_dir / f"{prefix}_{ts}"
-    result_dir.mkdir(parents=True, exist_ok=True)
-    return result_dir
+    base_dir = get_data_dir("results", create=True)  # Obtém a pasta base de resultados
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")  # Gera timestamp atual
+    result_dir = base_dir / f"{prefix}_{ts}"  # Cria nome da nova pasta com prefixo e timestamp
+    result_dir.mkdir(parents=True, exist_ok=True)  # Cria a pasta no disco
+    return result_dir  # Retorna o caminho da nova pasta

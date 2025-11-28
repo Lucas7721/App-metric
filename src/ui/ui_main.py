@@ -15,10 +15,9 @@ A partir dessas informações, o programa identifica regiões em movimento e ext
 intensidade do movimento e limites aproximados do objeto detectado. 
 O trabalho demonstra a aplicação prática do processamento digital de imagens para análise de movimento utilizando filtros espaciais.
 '''
-# ################
+#################
 
+from ui_init import AppMetricApp  # Importa a classe principal da aplicação do arquivo ui_init.py
 
-from ui_init import AppMetricApp
-
-if __name__ == "__main__":
-    app = AppMetricApp()
+if __name__ == "__main__":  # Verifica se este arquivo está sendo executado diretamente (não importado)
+    app = AppMetricApp()  # Instancia a classe AppMetricApp, iniciando a aplicação
