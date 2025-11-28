@@ -1,3 +1,22 @@
+# ===================================================================
+# Cabeçalho do Programa
+# Nome e RAs: Lucas Soares - 324155365, Robert Zica - , Leonardo Vieira - 323119033, Asafe Orneles -, Bruno Eduardo - 
+# Data: 27/11/2025
+# Curso: Ciência da Computação
+# Professor: EUZÉBIO D. DE SOUZA
+# Trabalho: Detecção de Movimento usando Filtros Espaciais
+# ===================================================================
+# ANOTAÇÕES
+# ===================================================================
+'''
+Este módulo gerencia a lógica das abas da interface gráfica, especificamente a aba de "Medição de Objeto".
+Ele define os elementos visuais (botões, labels, barras de progresso) e conecta as ações do usuário
+(como selecionar vídeo e pasta) com a lógica de processamento (tracking) que roda em segundo plano (threading).
+É aqui que a interação principal do usuário com o sistema acontece.
+'''
+# ################
+
+
 import os
 import customtkinter as ctk
 import threading

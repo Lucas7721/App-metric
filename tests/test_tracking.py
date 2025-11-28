@@ -1,3 +1,23 @@
+# ===================================================================
+# Cabeçalho do Programa
+# Nome e RAs: Lucas Soares - 324155365, Robert Zica - , Leonardo Vieira - 323119033, Asafe Orneles -, Bruno Eduardo - 
+# Data: 27/11/2025
+# Curso: Ciência da Computação
+# Professor: EUZÉBIO D. DE SOUZA
+# Trabalho: Detecção de Movimento usando Filtros Espaciais
+# ===================================================================
+# ANOTAÇÕES
+# ===================================================================
+'''
+Este arquivo contém os testes unitários responsáveis por validar as dependências 
+de Visão Computacional e a lógica de criação dos rastreadores (Trackers). 
+Ele verifica se a biblioteca OpenCV está instalada corretamente e se os algoritmos 
+de rastreamento (CSRT e KCF), necessários para acompanhar o movimento dos objetos, 
+estão disponíveis e funcionais no ambiente de execução.
+'''
+#################
+
+
 import unittest
 import sys
 import os

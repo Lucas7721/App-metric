@@ -1,4 +1,21 @@
-# src/ui/ui_init.py
+# ===================================================================
+# Cabeçalho do Programa
+# Nome e RAs: Lucas Soares - 324155365, Robert Zica - , Leonardo Vieira - 323119033, Asafe Orneles -, Bruno Eduardo - 
+# Data: 27/11/2025
+# Curso: Ciência da Computação
+# Professor: EUZÉBIO D. DE SOUZA
+# Trabalho: Detecção de Movimento usando Filtros Espaciais
+# ===================================================================
+# ANOTAÇÕES
+# ===================================================================
+'''
+Este módulo é responsável pela inicialização da interface gráfica do usuário (GUI).
+Ele cria a janela principal da aplicação, exibe a tela de boas-vindas com a logo do projeto
+e gerencia a transição para a tela principal de funcionalidades (abas de medição).
+Utiliza a biblioteca CustomTkinter para criar uma interface moderna e responsiva.
+'''
+#################
+
 
 import sys
 import os

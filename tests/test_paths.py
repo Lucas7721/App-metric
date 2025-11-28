@@ -1,3 +1,24 @@
+# ===================================================================
+# Cabeçalho do Programa
+# Nome e RAs: Lucas Soares - 324155365, Robert Zica - , Leonardo Vieira - 323119033, Asafe Orneles -, Bruno Eduardo - 
+# Data: 27/11/2025
+# Curso: Ciência da Computação
+# Professor: EUZÉBIO D. DE SOUZA
+# Trabalho: Detecção de Movimento usando Filtros Espaciais
+# ===================================================================
+# ANOTAÇÕES
+# ===================================================================
+'''
+Este arquivo contém os testes unitários responsáveis por validar a lógica de 
+gerenciamento de caminhos e diretórios do projeto. 
+Ele verifica se a raiz do projeto é identificada corretamente e se as pastas 
+essenciais de dados ('raw' e 'results') são criadas e acessíveis. 
+Isso garante que o software consiga ler os vídeos de entrada e salvar os 
+relatórios de saída no local correto, independente do computador onde for executado.
+'''
+#################
+
+
 import unittest
 import sys
 import os

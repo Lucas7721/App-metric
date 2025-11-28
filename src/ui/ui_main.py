@@ -17,6 +17,7 @@ O trabalho demonstra a aplicação prática do processamento digital de imagens 
 '''
 # ################
 
+
 from ui_init import AppMetricApp
 
 if __name__ == "__main__":

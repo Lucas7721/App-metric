@@ -1,23 +1,21 @@
-# src/app_metrics/core/tracking.py
+# ===================================================================
+# Cabeçalho do Programa
+# Nome e RAs: Lucas Soares - 324155365, Robert Zica - , Leonardo Vieira - 323119033, Asafe Orneles -, Bruno Eduardo - 
+# Data: 27/11/2025
+# Curso: Ciência da Computação
+# Professor: EUZÉBIO D. DE SOUZA
+# Trabalho: Detecção de Movimento usando Filtros Espaciais
+# ===================================================================
+# ANOTAÇÕES
+# ===================================================================
+'''
+Este módulo contém o núcleo da lógica de rastreamento de objetos (Tracking).
+Ele utiliza algoritmos do OpenCV (como CSRT e KCF) para seguir um objeto selecionado pelo usuário frame a frame.
+Além do rastreamento visual, este arquivo é responsável por calcular métricas cinemáticas (velocidade, distância, trajetória),
+gerar o vídeo processado com as anotações visuais e exportar os relatórios estatísticos (.txt) e de dados (.csv).
+'''
+#################
 
-"""
-    Faz tracking de um único objeto escolhido pelo usuário (via ROI) em um vídeo.
-
-    Mostra uma janela com:
-      - bounding box
-      - ponto central
-      - HUD com frame e velocidades
-
-    Gera:
-      - vídeo de saída com tracking (opcional)
-      - CSV com trajetória (opcional)
-      - relatório .txt com resumo das métricas
-
-    pixels_per_meter:
-        se você souber quantos pixels ≈ 1 metro na cena, informe aqui.
-        Ex.: 50 pixels ≈ 1 metro -> pixels_per_meter=50.
-        Aí o relatório incluirá velocidades em m/s e km/h.
-"""
 
 import os
 import csv

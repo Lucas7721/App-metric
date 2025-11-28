@@ -1,11 +1,22 @@
-# src/io/logger.py
+# ===================================================================
+# Cabeçalho do Programa
+# Nome e RAs: Lucas Soares - 324155365, Robert Zica - , Leonardo Vieira - 323119033, Asafe Orneles -, Bruno Eduardo - 
+# Data: 27/11/2025
+# Curso: Ciência da Computação
+# Professor: EUZÉBIO D. DE SOUZA
+# Trabalho: Detecção de Movimento usando Filtros Espaciais
+# ===================================================================
+# ANOTAÇÕES
+# ===================================================================
+'''
+Este módulo implementa um sistema de logs centralizado para a aplicação.
+Ele é responsável por registrar eventos importantes, erros e informações de debug
+tanto no console quanto em arquivos de texto persistentes na pasta 'data/results/logs'.
+Isso facilita o monitoramento da execução do software e a identificação de problemas
+durante o uso ou desenvolvimento.
+'''
+#################
 
-"""
-Logger simples para o app-metric.
-
-- Grava logs em data/results/logs/app_metric.log
-- Também imprime no console (stdout) para debug.
-"""
 
 import logging
 from logging import Logger
