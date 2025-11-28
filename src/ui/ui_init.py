@@ -41,7 +41,7 @@ class AppMetricApp:
         try:
             if os.path.exists(logo_path):
                 pil_image = Image.open(logo_path)
-                self.image_logo = ctk.CTkImage(light_image=pil_image, dark_image=pil_image, size=(250, 250)) # Ajuste o tamanho se precisar
+                self.image_logo = ctk.CTkImage(light_image=pil_image, dark_image=pil_image, size=(250, 250))
             else:
                 print(f"Aviso: Logo não encontrada em {logo_path}")
         except Exception as e:

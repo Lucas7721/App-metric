@@ -234,7 +234,6 @@ def track_single_object(
 
             panel = np.hstack([frame, edges_bgr, diff_bgr])
             
-            # Infos na imagem
             txt = f"frame={frame_idx} | vel={speed_px:.2f}"
             cv2.putText(panel, txt, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
 
@@ -254,7 +253,7 @@ def track_single_object(
         cv2.imshow("Tracking", frame_disp)
 
         key = cv2.waitKey(1) & 0xFF
-        if key == 27:  # ESC
+        if key == 27:
             break
 
         if cv2.getWindowProperty("Tracking", cv2.WND_PROP_VISIBLE) < 1:
