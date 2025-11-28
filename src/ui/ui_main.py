@@ -1,6 +1,6 @@
 # ===================================================================
 # Cabeçalho do Programa
-# Nome e RAs: Lucas Soares - 324155365, Robert Zica - , Leonardo Vieira - 323119033, Asafe Orneles -, Bruno Eduardo - 
+# Nome e RAs: Lucas Soares - 324155365, Robert Zica - 323112024, Leonardo Vieira - 323119033, Asafe Orneles - 324172578, Bruno Eduardo - 322123429
 # Data: 27/11/2025
 # Curso: Ciência da Computação
 # Professor: EUZÉBIO D. DE SOUZA
